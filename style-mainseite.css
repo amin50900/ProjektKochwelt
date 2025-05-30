@@ -1,0 +1,36 @@
+body {
+    margin: 0px;
+    font-family: "Raleway", sans-serif;
+}
+
+
+.wok-section3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wok-div {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 150px;
+    gap: 32px;
+}
+
+
+.wok-div img {
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.pfanne-wok-h2 {
+    margin-bottom: 40px;
+    font-weight: 600;
+    margin-top: 0px;
+    padding-top: 50px;
+}
