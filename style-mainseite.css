@@ -29,6 +29,98 @@ header img {
     text-underline-offset: 7px;
 }
 
+/* =================== Content-Begrenzung ======================= */
+.wrapper-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==================== Section-Styling ========================== */
+.want-something-new {
+  background-color: #f0f0f0;
+  padding: 60px 0;
+}
+
+.want-something-new h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  font-family: "Raleway", sans-serif;
+}
+
+/* ================== Grid-Layout für Artikel ===================== */
+.want-something-new-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* ======================= Einzelnes Item ========================== */
+.want-something-new-item {
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.want-something-new-item:hover {
+  transform: scale(1.05);
+}
+
+.want-something-new-item img {
+  width: 200px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.want-something-new-item span {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #000;
+  font-family: Arial, sans-serif;
+}
+
+/* ======================= Responsive: Tablet ========================== */
+@media (max-width: 1024px) {
+  .want-something-new-grid {
+    gap: 30px;
+  }
+
+  .want-something-new-item img {
+    width: 180px;
+  }
+
+  .want-something-new h2 {
+    font-size: 22px;
+  }
+}
+
+/* ======================= Responsive: Smartphone ========================== */
+@media (max-width: 600px) {
+  .want-something-new-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .want-something-new-item img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .want-something-new-item span {
+    font-size: 16px;
+  }
+
+  .want-something-new h2 {
+    font-size: 20px;
+  }
+}
+/* ===========================================================================*/
+
 .wok-section3 {
     display: flex;
     flex-direction: column;
