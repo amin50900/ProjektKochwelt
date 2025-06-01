@@ -28,7 +28,9 @@ header img {
     text-decoration-thickness: 3px;
     text-underline-offset: 7px;
 }
-
+h2 {
+  margin-top: 60px;
+}
 /* =================== Content-Begrenzung ======================= */
 .wrapper-container {
   max-width: 1440px;
