@@ -150,4 +150,28 @@ header img {
     font-weight: 600;
     margin-top: 78px;
     padding-top: 50px;
+} 
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color:grey;
+  height: 100px;
+  
+}
+.footer-img {
+width:250px;
+height: auto;
+  
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+
+}
+.social-icons a img {
+  width: 32px;
+  height: 32px;
 }
