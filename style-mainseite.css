@@ -38,6 +38,61 @@ h2 {
   text-underline-offset: 7px;
 }
 
+.croissantdiv {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  padding-left: 370px;
+  padding-right: 200px;
+  padding-bottom: 30px;
+  padding-top: 50px;
+  gap: 32px;
+}
+
+/* Rest unverändert */
+.croissantsection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+.croissantdiv img {
+  width: 400px;
+  height:250px;
+  object-fit: fill;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.Französische {
+  position: relative;
+  top:  100px;
+  left: 200px;
+  display: flex;
+
+}
+
+.croissant-body {
+ margin-bottom: 40px;
+    font-weight: 600;
+    margin-top: 20px;
+    padding-top: 50px;
+}
+
+.Rezept-offnen {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  position: absolute;
+  top: 300px;
+  right: 510px;
+}
+
 /* =================== Content-Begrenzung ======================= */
 .wrapper-container {
   max-width: 1440px;
