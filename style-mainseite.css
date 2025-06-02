@@ -27,13 +27,16 @@ header img {
   color: #606060;
 }
 
+h2 {
+  margin-top: 60px;
+}
+
 .navlink:hover {
   color: green;
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-underline-offset: 7px;
 }
-
 
 /* =================== Content-Begrenzung ======================= */
 .wrapper-container {
@@ -142,6 +145,77 @@ header img {
   display: block
 }
 
+
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color:grey;
+  height: 100px;
+  margin-top: 160px;
+  
+}
+.footer-img {
+width:250px;
+height: auto;
+  
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+
+}
+.social-icons a img {
+  width: 32px;
+  height: 32px;
+}
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 300px;
+}
+.contact-box {
+  background-color:rgb(185, 176, 176) ;
+  padding: 20px 30px;
+  border-radius: 10px;
+  width: 400px;
+
+}
+.contact-box h2 {
+  margin-top: 0;
+  font-weight: bold;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  margin: 10px 0 5px;
+  font-size: 0.9em;
+}
+input, textarea {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: green;
+  color:white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.impressum-site {
+  margin-top: 230px;
+  margin-left: 10px;
+}
+
+
 /* ======================= Responsive: Tablet ========================== */
 
 @media (max-width: 1280px) {
@@ -217,5 +291,4 @@ header img {
   }
 
 }
-
 /* ===========================================================================*/
