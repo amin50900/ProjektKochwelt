@@ -118,8 +118,7 @@ h2 {
 /* ================== Grid-Layout für Artikel ===================== */
 .want-something-new-grid {
   display: flex;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
