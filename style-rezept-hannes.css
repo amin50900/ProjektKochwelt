@@ -231,6 +231,8 @@ footer {
 .social-icons a img {
     width: 32px;
     height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 main {
