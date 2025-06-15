@@ -23,9 +23,9 @@
         </nav>
     </header>
     <main>
-        <div class="contact-box">
+        <div  class="contact-box">
             <h2>Kontaktiere uns</h2>
-            <form>
+            <form  id="contactForm">
                 <label for="name">Dein Name:</label>
                 <input type="text" id="name" required>
                 <label for="email">Deine E-Mail:</label>
@@ -35,7 +35,11 @@
                 <button type="submit">Abschicken</button>
             </form>
         </div>
-
+       
+        <div id="thankYouBox" class="hidden">
+            Vielen Dank für ihre Nachricht!
+           
+         </div>
     </main>
 
 
@@ -56,7 +60,8 @@
             <a target="_blank" href="https://x.com/"><img src="./img/x logo.png" alt="twitter"></a>
         </div>
     </footer>
-
-    
+   
+    <script src="kontakt.js"></script>
+   
 </body>
 </html>

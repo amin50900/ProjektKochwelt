@@ -341,7 +341,36 @@ main {
   margin-top: 0;
   font-weight: bold;
 }
-
+/*====================kontaktbox benachrichtigung============================================*/
+#thankYouBox {
+  margin-top: 20px;
+  padding:15px 20px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.5s ease;
+}
+#thankYouBox.show {
+  
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px);
+}
+#thankYouBox.hidden {
+  display: none;
+}
+.show {
+  display: block;
+  animation: fadIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+/*================================================================================================*/
 form {
   display: flex;
   flex-direction: column;
