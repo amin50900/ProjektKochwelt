@@ -1,6 +1,7 @@
 body {
   margin: 0px;
   font-family: "Raleway", sans-serif;
+  max-width: 1920px;
 }
 
 header {
@@ -94,110 +95,116 @@ h2 {
 }
 
 
-@media (min-width: 350px) and (max-width: 1440px){}
+@media (min-width: 350px) and (max-width: 1440px) {}
+
+.croissantdiv {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 50px 200px 30px 370px;
+  margin-top: 70px;
+}
+
+.croissantdiv img {
+  width: 400px;
+  height: 250px;
+  object-fit: fill;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.croissant-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Französische {
+  margin: 0;
+}
+
+.croissant-body {
+  margin: 0;
+  font-weight: 600;
+}
+
+.Rezept-offnen {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 200px;
+  margin: 0;
+  margin-top: 50px;
+}
+
+
+@media (max-width: 1024px) and (min-width: 600px) {
   .croissantdiv {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 32px;
-    padding: 50px 200px 30px 370px;
-    margin-top: 70px;
+    padding: 30px 50px;
+    gap: 24px;
   }
 
   .croissantdiv img {
-    width: 400px;
-    height: 250px;
-    object-fit: fill;
-    object-position: center;
-    border-radius: 10px;
+    width: 50%;
+    height: auto;
+    max-width: 300px;
   }
 
   .croissant-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .Französische {
-    margin: 0;
-  }
-
-  .croissant-body {
-    margin: 0;
-    font-weight: 600;
+    gap: 16px;
   }
 
   .Rezept-offnen {
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    width: 200px;
-    margin: 0;
-    margin-top: 50px;
+    width: 150px;
+    margin-top: 30px;
+  }
+}
+
+
+@media (max-width: 767px) and (min-width: 350px) {
+  .croissantdiv {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
   }
 
-
-  @media (max-width: 1024px) and (min-width: 600px) {
-    .croissantdiv {
-      padding: 30px 50px;
-      gap: 24px;
-    }
-    .croissantdiv img {
-      width: 50%;
-      height: auto;
-      max-width: 300px;
-    }
-    .croissant-content {
-      gap: 16px;
-    }
-    .Rezept-offnen {
-      width: 150px;
-      margin-top: 30px;
-    }
+  .croissantdiv img {
+    width: 100%;
+    height: auto;
+    max-width: none;
   }
 
-
-  @media (max-width: 767px) and (min-width: 350px) {
-    .croissantdiv {
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      gap: 20px;
-    }
-    .croissantdiv img {
-      width: 100%;
-      height: auto;
-      max-width: none;
-    }
-    .croissant-content {
-      gap: 16px;
-      align-items: center;
-      text-align: center;
-    }
-    .Rezept-offnen {
-      width: 100%;
-      max-width: 300px;
-      margin-top: 20px;
-    }
+  .croissant-content {
+    gap: 16px;
+    align-items: center;
+    text-align: center;
   }
+
+  .Rezept-offnen {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+  }
+}
 
 /* =================== Content-Begrenzung ======================= */
 .wrapper-container {
   max-width: 1440px;
   margin: 0 auto;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 150px;
+  padding-bottom: 150px;
 
 }
 
 /* ==================== Section-Styling ========================== */
 .want-something-new {
   background-color: #f0f0f0;
-  padding: 60px 0;
 }
 
 .want-something-new h2 {
@@ -205,6 +212,7 @@ h2 {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 40px;
+  margin-top: 0px;
 }
 
 /* ================== Grid-Layout für Artikel ===================== */
@@ -227,8 +235,9 @@ h2 {
 
 .want-something-new-item img {
   width: 200px;
-  height: auto;
+  height: 150px;
   border-radius: 4px;
+  object-fit: cover;
 }
 
 .want-something-new-item span {
@@ -250,7 +259,7 @@ h2 {
   flex-direction: column;
   padding-left: 150px;
   padding-right: 150px;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
   gap: 32px;
 }
 
@@ -269,7 +278,7 @@ h2 {
 
 .wok-div img {
   width: 200px;
-  height: 200px;
+  height: 150px;
   object-fit: fill;
   object-position: center;
   border-radius: 10px;
@@ -299,7 +308,7 @@ footer {
   justify-content: space-around;
   background-color: grey;
   height: 100px;
-  margin-top: 160px;
+  margin-top: 90px;
 
 }
 
@@ -374,6 +383,18 @@ button {
   margin-left: 10px;
 }
 
+.datenschutz-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.datenschutz-link:hover {
+  color: green;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 7px;
+}
+
 
 /* ======================= Responsive: Tablet ========================== */
 
@@ -385,6 +406,7 @@ button {
 
   .wok-img-div {
     gap: 100px;
+    margin-top: 40px;
   }
 
 }
@@ -422,11 +444,11 @@ button {
   .want-something-new-grid {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 75px;
   }
 
   .want-something-new-item img {
-    width: 100%;
+    width: 225px;
     max-width: 280px;
   }
 
@@ -436,6 +458,7 @@ button {
 
   .want-something-new h2 {
     font-size: 20px;
+    margin-bottom: 50px;
   }
 
   .display-none-header {
