@@ -17,7 +17,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     
     // in 5 sekunden nachricht verschwunden
     setTimeout(() => {
-        thankYouBox.classList.remove("show");
+        thankYouBox.classList.remove("hidden");
         thankYouBox.classList.add("hidden");
 
         contactForm.classList.remove("hidden");
