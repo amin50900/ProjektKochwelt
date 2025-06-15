@@ -1,6 +1,7 @@
 body {
     font-family: "Raleway", sans-serif;
     margin: 0px;
+    max-width: 1920px;
 }
 
 span {
