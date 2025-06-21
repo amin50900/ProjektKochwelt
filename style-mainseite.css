@@ -38,24 +38,13 @@ h2 {
   text-decoration-thickness: 3px;
   text-underline-offset: 7px;
 }
-
+  /* Default (Desktop) */
 .croissantdiv {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-items: flex-start;
-  padding-left: 370px;
-  padding-right: 200px;
-  padding-bottom: 30px;
-  padding-top: 50px;
   gap: 32px;
-}
-
-/* Rest unverändert */
-.croissantsection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 100px;
+  padding: 120px 200px 30px 350px ;
 }
 
 .croissantdiv img {
@@ -66,62 +55,72 @@ h2 {
   border-radius: 10px;
 }
 
-.Französische {
-  position: relative;
-  top: 100px;
-  left: 200px;
+.croissant-content {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
+.Französische {
+  margin: 0;
 }
 
 .croissant-body {
-  margin-bottom: 40px;
   font-weight: 600;
-  margin-top: 20px;
-  padding-top: 50px;
 }
 
 .Rezept-offnen {
   background-color: #28a745;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
-  position: absolute;
-  top: 300px;
-  right: 510px;
+  width: 120px;
+  margin-top: 50px;
+  text-decoration: none;
+  text-align: center;
 }
 
-.croissantdiv {
+ @media (max-width: 1024px)  {
+ .croissantdiv {
     display: flex;
-    flex-direction: row;       
-    align-items: flex-start;
-    gap: 32px;                 
-    padding: 50px 200px 30px 370px;
+    flex-direction: column !important;
+    align-items: center;
+    padding: 20px !important;
+    gap: 24px;
   }
 
   .croissantdiv img {
-    width: 400px;
-    height: 250px;
-    object-fit: fill;
-    object-position: center;
-    border-radius: 10px;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 400px;
   }
 
   .croissant-content {
     display: flex;
-    flex-direction: column;    
-    gap: 20px;                 
+     }
+
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
   }
 
-  .Französische {
-    margin: 0;                 
+  .Rezept-offnen {
+    width: 100% !important;
+    max-width: 300px;
+    margin-top: 20px;
   }
 
-  .croissant-body {
-    font-weight: 600;
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .croissantdiv {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
   }
 
   .Rezept-offnen {
@@ -156,31 +155,12 @@ h2 {
       margin-top: 30px;
     }
   }
-
-  /* Mobile (up to 767px) */
-  @media (max-width: 767px) and (min-width: 350px) {
-    .croissantdiv {
-      flex-direction: column;   
-      align-items: center;
-      padding: 20px;
-      gap: 20px;
-    }
-    .croissantdiv img {
-      width: 100%;
-      height: auto;
-      max-width: none;
-    }
-    .croissant-content {
-      gap: 16px;
-      align-items: center;
-      text-align: center;
-    }
-    .Rezept-offnen {
-      width: 100%;
-      max-width: 300px;
-      margin-top: 20px;
-    }
+  .Rezept-offnen {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
   }
+
 
 /* =================== Content-Begrenzung ======================= */
 .wrapper-container {
@@ -297,7 +277,7 @@ footer {
   justify-content: space-around;
   background-color: grey;
   height: 100px;
-  margin-top: 100px;
+  margin-top: 260px;
 
 }
 
@@ -493,8 +473,11 @@ button {
   .info-box {
     display: none !important;
   }
+  
+ 
+ }
 
-}
+
 
 
 
