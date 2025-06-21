@@ -28,6 +28,5 @@ form.addEventListener("submit", event => {
   Object.entries(ingredients).forEach(([key, { amount, unit }]) => {
     const result = (amount / BASE_PORTIONS) * portions;
     document.getElementById(key).textContent = `${result.toFixed(2)} ${unit}`;
-
   });
 });
