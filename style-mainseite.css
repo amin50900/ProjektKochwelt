@@ -39,71 +39,13 @@ h2 {
   text-underline-offset: 7px;
 }
 
-.croissantdiv {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-start;
-  padding-left: 370px;
-  padding-right: 200px;
-  padding-bottom: 30px;
-  padding-top: 50px;
-  gap: 32px;
-}
-
-/* Rest unverändert */
-.croissantsection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 100px;
-}
-
-.croissantdiv img {
-  width: 400px;
-  height: 250px;
-  object-fit: fill;
-  object-position: center;
-  border-radius: 10px;
-}
-
-.Französische {
-  position: relative;
-  top: 100px;
-  left: 200px;
-  display: flex;
-
-}
-
-.croissant-body {
-  margin-bottom: 40px;
-  font-weight: 600;
-  margin-top: 20px;
-  padding-top: 50px;
-}
-
-.Rezept-offnen {
-  background-color: #28a745;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  position: absolute;
-  top: 300px;
-  right: 510px;
-}
-
-
-@media (min-width: 350px) and (max-width: 1440px) {}
-
+  /* Default (Desktop) */
 .croissantdiv {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: 32px;
-  padding: 50px 200px 30px 370px;
-  margin-top: 70px;
+  padding: 120px 200px 30px 350px ;
 }
 
 .croissantdiv img {
@@ -125,7 +67,6 @@ h2 {
 }
 
 .croissant-body {
-  margin: 0;
   font-weight: 600;
 }
 
@@ -137,36 +78,45 @@ h2 {
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
-  width: 200px;
-  margin: 0;
+  width: 120px;
   margin-top: 50px;
+  text-decoration: none;
+  text-align: center;
 }
 
-
-@media (max-width: 1024px) and (min-width: 600px) {
-  .croissantdiv {
-    padding: 30px 50px;
+ @media (max-width: 1024px)  {
+ .croissantdiv {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    padding: 20px !important;
     gap: 24px;
   }
 
   .croissantdiv img {
-    width: 50%;
-    height: auto;
-    max-width: 300px;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 400px;
   }
 
   .croissant-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 16px;
   }
 
   .Rezept-offnen {
-    width: 150px;
-    margin-top: 30px;
+    width: 100% !important;
+    max-width: 300px;
+    margin-top: 20px;
   }
 }
 
 
-@media (max-width: 767px) and (min-width: 350px) {
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
   .croissantdiv {
     flex-direction: column;
     align-items: center;
@@ -190,9 +140,10 @@ h2 {
     width: 100%;
     max-width: 300px;
     margin-top: 20px;
+    
   }
-  
 }
+
 
 /* =================== Content-Begrenzung ======================= */
 .wrapper-container {
