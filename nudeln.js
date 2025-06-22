@@ -21,7 +21,7 @@ form.addEventListener("submit", event => {
 
   const portions = parseFloat(input.value);
   if (isNaN(portions) || portions <= 0) {
-    alert("Please enter a valid number of portions.");
+    alert("gültige Zahl von Portionen eingeben.");
     return;
   }
 
