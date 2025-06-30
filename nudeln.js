@@ -1,41 +1,27 @@
-const BASE_PORTIONS = 1;
+function aktualisiereZutaten() {
+    const portionenInput = document.getElementById('portionen');
+    const zutatenList = document.querySelectorAll('#zutaten li');
 
-const ingredients = {
-  nudeln:           { amount: 250, unit: "g"     },
-  sojasprossen:     { amount: 200, unit: "g"     },
-  lauchzwiebel:     { amount:   1, unit: "Stück" },
-  oel:              { amount:  36, unit: "ml"    },
-  sojasauce:        { amount:  78, unit: "g"     },
-  sambal:           { amount: 100, unit: "g"     },
-  paprikapulver:    { amount:  20, unit: "g"     },
-  currypulver:      { amount:  20, unit: "g"     },
-  chilipulver:      { amount:  10, unit: "g"     },
-  gefluegelfleisch: { amount: 200, unit: "g"     },
-};
+    let portionen = parseInt(portionenInput.value);
+    if (isNaN(portionen) || portionen < 1) {
+      portionen = 1;
+    }
 
-const form = document.getElementById("portionDiv");
-const input = document.getElementById("portions");
+    portionenInput.value = portionen;
 
-form.addEventListener("submit", event => {
-  event.preventDefault();
 
-  const portions = parseFloat(input.value);
-  if (isNaN(portions) || portions <= 0) {
-    alert("Please enter a valid number of portions.");
-    return;
+    zutatenList.forEach(item => {
+      const basis = parseFloat(item.getAttribute('data-basis'));
+      const einheit = item.getAttribute('data-einheit');
+      let menge = basis * portionen;
+      let formatiert = Number.isInteger(menge) ? menge : menge.toFixed(2).replace('.', ',');
+      item.textContent = `${formatiert} ${einheit}`;
+    });
   }
 
-  Object.entries(ingredients).forEach(([key, { amount, unit }]) => {
-    const result = (amount / BASE_PORTIONS) * portions;
-    document.getElementById(key).textContent = `${result.toFixed(2)} ${unit}`;
+  // Optional: Enter-Taste aktivieren
+  document.getElementById('portionen').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      aktualisiereZutaten();
+    }
   });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const burgerMenu = document.querySelector(".burger-menu");
-  const nav = document.querySelector(".main-nav");
-
-  burgerMenu.addEventListener("click", function () {
-    nav.classList.toggle("show");
-  });
-});
